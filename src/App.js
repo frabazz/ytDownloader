@@ -1,6 +1,7 @@
-import ytDW from './utils/youtubeDownloader'
+
 import React, { Component } from 'react'
-var YouTube = require('youtube-node');
+const YouTube = require('youtube-node');
+const Creds = require('./config.json');
 export class App extends Component {
   render() {
     return (
@@ -11,7 +12,7 @@ export class App extends Component {
   }
   async componentDidMount(){
     var youtube = new YouTube();
-    youtube.setKey("key");
+    youtube.setKey(Creds["youtube_key"]);
     youtube.search('monke', 4, function(error, result) {
       if (error) {
         console.log(error);
