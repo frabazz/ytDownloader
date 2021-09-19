@@ -1,0 +1,98 @@
+{
+    "author": "MaxGazzeVEVO",
+    "title": "Max Gazzé - Ti Sembra Normale",
+    "formats": [
+        {
+            "codec": "video/mp4; codecs=\"avc1.42001E, mp4a.40.2\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.640028\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.08M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.4d401f\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.05M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.4d401e\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.04M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.4d401e\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.01M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.4d4015\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.00M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"avc1.4d400c\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/webm; codecs=\"vp9\"",
+            "isAudio": false
+        },
+        {
+            "codec": "video/mp4; codecs=\"av01.0.00M.08\"",
+            "isAudio": false
+        },
+        {
+            "codec": "audio/webm; codecs=\"opus\"",
+            "isAudio": true
+        },
+        {
+            "codec": "audio/mp4; codecs=\"mp4a.40.2\"",
+            "isAudio": true
+        },
+        {
+            "codec": "audio/webm; codecs=\"opus\"",
+            "isAudio": true
+        },
+        {
+            "codec": "audio/webm; codecs=\"opus\"",
+            "isAudio": true
+        }
+    ]
+}
