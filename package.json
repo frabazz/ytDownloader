@@ -1,25 +1,17 @@
 {
-  "name": "ytdownloader",
+  "name": "ytdownloader2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "main.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/frabazz/ytDownloader.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/frabazz/ytDownloader/issues"
-  },
-  "homepage": "https://github.com/frabazz/ytDownloader#readme",
-  "dependencies": {
-    "usetube": "^2.1.3",
+  "devDependencies": {
+    "electron": "^14.0.1",
     "ytdl-core": "^4.9.1"
   }
 }

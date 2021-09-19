@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Bootstrap Example</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/61d2c417ac.js" crossorigin="anonymous"></script>
+
+   <style>
+      .navbar-custom, #download-button{
+         background-color: #d72638;
+         color: white;
+      }
+   </style>
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-custom">
+      <a class="navbar-brand" href="#">Ytdownloader</a>
+      <button type="button" class="btn btn-default btn-sm">
+         <i class="fas fa-cog fa-lg"></i>
+      </button>
+   </nav>
+
+   <div class="jumbotron text-center">
+      <h1 id="welcome">Ciao Utente</h1>
+      <p>Benvenuto su ytdownloader! inserisci il link per scaricare la canzone in formato mp3</p>
+      <script>
+         const username = require("os").userInfo().username
+         document.getElementById('welcome').innerText = `Ciao ${username}`
+      </script>
+   </div>
+
+   <div class="container">
+      <form>
+         <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" id="url-field">
+            <div class="input-group-prepend">
+               <span class="input-group-text" id="download-button">Scarica</span>
+            </div>
+         </div>
+      </form>
+      <script>
+         require('./index.js')
+      </script>
+   </div>
+</body>
+
+</html>
