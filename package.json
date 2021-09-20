@@ -13,5 +13,8 @@
   "devDependencies": {
     "electron": "^14.0.1",
     "ytdl-core": "^4.9.1"
+  },
+  "dependencies": {
+    "ytdl-core": "^4.9.1"
   }
 }
