@@ -1,0 +1,14 @@
+.navbar-custom, #download-button{
+    background-color: #d72638;
+    color: white;
+ }
+ #download-button{
+    cursor : pointer;
+ }
+ #settings-ref{
+    color: black;
+ }
+ .my-container{
+    margin: auto;
+    width: 80%;
+ }

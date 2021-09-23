@@ -12,19 +12,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    <script src="https://kit.fontawesome.com/61d2c417ac.js" crossorigin="anonymous"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
-   <style>
-      .navbar-custom, #download-button{
-         background-color: #d72638;
-         color: white;
-      }
-      #download-button{
-         cursor : pointer;
-      }
-      #settings-ref{
-         color: black;
-      }
-   </style>
+   <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
@@ -58,10 +46,20 @@
       </form>
       <br>
       <div class="progress">
-         <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+         <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <br>
-      <img src="#" id="thumbnail-img" class="img-thumbnail">
+      <div class="my-container" id="my-container">
+         <ul class="list-group">
+            <li class="list-group-item">
+               <h6 id="thumbnail-title">Titolo</h6>
+            </li>
+            <li class="list-group-item">
+               <img src="#" id="thumbnail-img" class="img-thumbnail">
+            </li>
+         </ul>
+      </div>
       <script>
          require('./js/index.js')
       </script>
