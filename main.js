@@ -23,14 +23,12 @@ function createWindow() {
    }))
 }
 
-// Event handler for asynchronous incoming messages
-// Event handler for synchronous incoming messages
 
 const test_url = 'https://www.youtube.com/watch?v=vgBmn1S8Hus'
 
 ipcMain.on('songurl', (event, arg) => {
    const url = arg
-   getInfo(url, (info) => {
+   getInfo(url, (error, info) => {
       const sanitizer = (url) => url.replace(/[^a-z0-9]/gi, '_').toLowerCase()
       const title = info.videoDetails.title
       const filename = path.join(__dirname, `${settingPath}/${sanitizer(title)}.mp3`)

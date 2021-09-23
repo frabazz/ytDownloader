@@ -5,7 +5,9 @@ let EventEmitter = require('events').EventEmitter
 test_url = "https://www.youtube.com/watch?v=Ej0ME8xdiF8"
 
 getInfo = (url, callback) => {
-    ytdl.getInfo(url).then((info) => callback(info))
+    ytdl.getInfo(url)
+    .then((info) => callback(false, info))
+    .catch((error) => callback(true, null))
 } 
 
 class Downloader extends EventEmitter{
@@ -39,33 +41,7 @@ class Downloader extends EventEmitter{
         })
     }
 }
-const downloadVideo = (url) => {
-    getInfo(url, (info) => {
-        const formats = () => {
-            codecs = new Array()
-            info.formats.forEach(format => {
-                const codec = {
-                    codec : format.mimeType,
-                    isAudio : (format.hasAudio && !format.hasVideo)
-                }
-                codecs.push(codec)
-            })
-            return codecs
-        }
-        const infos = {
-            author : info.videoDetails.author.name,
-            title : info.videoDetails.title,
-            formats : formats()
-        }
-        var stream = ytdl.downloadFromInfo(info, {
-            quality: 'highestaudio'
-        }).on('progress', (chunks, donwloaded, total) => {
-            console.log((donwloaded/total)*100)
-        })
-        stream.pipe(fs.createWriteStream('audio.mp3'))
 
-    })
-}
 
 exports.Downloader = Downloader
 exports.getInfo = getInfo

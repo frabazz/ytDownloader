@@ -1,9 +1,22 @@
 const {ipcRenderer} = require('electron')
 
+/*
+  __            __ 
+  \/____________\/
+."|8---->/\<----8|".
+  |-----(||)-----|
+   \_----------_/
+     |========|
+      :______:
+
+*/
+//define DOM elements
 const donwload_button = document.getElementById('download-button')
 const input = document.getElementById('url-field')
 const progress_bar = document.getElementById('progress-bar')
 const thumbnail_img = document.getElementById('thumbnail-img')
+const thumbnail_title = document.getElementById('thumbnail-title')
+const container = document.getElementById('my-container')
 
 const isDownloading = false;
 
@@ -18,7 +31,7 @@ const show = (...elements) => {
     });
 }
 
-hide(progress_bar, thumbnail_img)
+hide(progress_bar, thumbnail_img, container)
 
 
 const setProgress = (percentage) => {
@@ -27,6 +40,10 @@ const setProgress = (percentage) => {
 
 const setThumbnail = (src) => {
     thumbnail_img.src = src
+}
+
+const setThumbnailTitle = (title) => {
+    thumbnail_title.innerHTML = title
 }
 
 //hideProgressBar()
@@ -39,8 +56,9 @@ donwload_button.onclick = () => {
 
 ipcRenderer.on('info', (event, info) => {
     console.log(`downloadig ${info.title} by ${info.author}`)
-    show(thumbnail_img)
+    show(thumbnail_img, container)
     setThumbnail(info.thumbnail)
+    setThumbnailTitle(info.title)
 })
 ipcRenderer.on('progress', (event, progress) => {
     show(progress_bar)

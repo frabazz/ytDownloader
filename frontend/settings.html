@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <title>Bootstrap Example</title>
    <meta charset="utf-8">
@@ -10,24 +11,44 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    <script src="https://kit.fontawesome.com/61d2c417ac.js" crossorigin="anonymous"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
+
    <style>
-      .navbar-custom, #download-button{
+      .navbar-custom,
+      #download-button {
          background-color: #d72638;
          color: white;
       }
-      #download-button{
-         cursor : pointer;
+
+      #download-button {
+         cursor: pointer;
       }
-      #settings-ref{
+
+      #settings-ref {
          color: black;
       }
    </style>
 </head>
+
 <body>
-   <button type="button" id="reveal-file" class="btn btn-danger">
-      apri downloads
-   </button>
+   <nav class="navbar navbar-light navbar-custom">
+      <a class="navbar-brand" href="#">Ytdownloader</a>
+      <button type="button" class="btn btn-default btn-sm">
+         <a id="settings-ref" href="./settings.html">
+            <i class="fas fa-cog fa-lg"></i>
+         </a>
+      </button>
+   </nav>
+   <br />
+   <div class="container">
+      <h6>Apri la cartella contenente tutti i file scaricati</h6>
+      <button type="button" id="reveal-file" class="btn btn-danger">
+         apri
+      </button>
+      <h6>Seleziona la cartella di destinazione dei donwnload</h6>
+      <button type="button" class="btn btn-danger">
+         seleziona
+      </button>
+   </div>
    <script>
       require('./js/settings.js')
    </script>
